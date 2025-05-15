@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const fs = require('fs');
 const { v4: uuidv4 } = require('uuid');
 const app = express();
-const port = 3001;
+const port = 3000;
 
 app.use(bodyParser.json());
 
