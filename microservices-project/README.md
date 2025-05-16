@@ -43,18 +43,11 @@ To get started with this project, you will need to have Docker and Docker Compos
 3. Build and run the services using Docker Compose:
 
    ```
-   docker-compose up --build
+   docker-compose build --no-cache
+   docker-compose up -d
    ```
 
 4. Access the services at the following endpoints:
    - Products Service: `http://localhost:3001/products`
    - Customers Service: `http://localhost:3002/customers`
    - Orders Service: `http://localhost:3003/orders`
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a pull request or open an issue for any enhancements or bug fixes.
-
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for more details.
