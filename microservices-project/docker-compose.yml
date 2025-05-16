@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  products-service:
+    build:
+      context: ./products-service
+      network: host
+    ports:
+      - "3001:3000"
+
+  customers-service:
+    build:
+      context: ./customers-service
+      network: host
+    ports:
+      - "3002:3000"
+
+  orders-service:
+    build:
+      context: ./orders-service
+      network: host
+    ports:
+      - "3003:3000"
+
+networks:
+  default:
+    driver: bridge
