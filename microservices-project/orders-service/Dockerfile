@@ -1,5 +1,5 @@
 # ビルドステージ
-FROM node:14 AS build
+FROM node:22 AS build
 
 WORKDIR /usr/src/app
 
@@ -9,7 +9,7 @@ RUN npm install --production
 COPY ./src ./src
 
 # ランタイムステージ（軽量）
-FROM node:14-slim
+FROM node:22-slim
 
 WORKDIR /usr/src/app
 
